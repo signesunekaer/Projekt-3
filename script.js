@@ -33,4 +33,4 @@ prevButton.addEventListener('click', () => {
 });
 
 // Sørg for, at slideren tilpasser sig ved resizing
-window.addEventListener('
+window.addEventListener('resize', updateCarousel);

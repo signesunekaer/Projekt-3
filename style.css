@@ -48,6 +48,20 @@ body {
   }
 
   /* multimediedesigner sektion */
+
+  .grid-container {
+    display: grid;
+    grid-template-areas: 
+    'menu menu menu'
+    'main main main'
+    'billedboks billedboks billedboks'
+    'tekstboks tekstboks tekstbokst'
+    'footer footer footer';
+    grid-template-columns: 3fr 3fr 3fr;
+    grid-template-rows: 100px 600px 700px 600px 400px;
+    height: 100vh;
+  }
+
   .multimediedesigner {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -85,19 +99,4 @@ body {
     }
   
   .minportfolio {
-    background-color: #f7a4c2;
-  }
-
-/* Basisstil for carousel */
-.carousel {
-    position: relative;
-    width: 100%;
-    max-width: 600px; /* Sæt maks. bredde */
-    margin: auto;
-    overflow: hidden; /* Skjul indhold uden for containeren */
-    border-radius: 10px;
-  }
-  
-  /* Container til slides */
-  .carousel-container {
-    displa
+    backg
