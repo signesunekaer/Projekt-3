@@ -1,95 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="da">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Signe Sunekær forside</title>
+    <title>Signe Sunekær</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/kvb7jui.css" />
   </head>
-  <body>
-    <header>
-      <!-- alt her fra og ned til næste kommentar med link er fra https://www.youtube.com/watch?v=8eFeIFKAKHw -->
-      <nav>
-        <input type="checkbox" id="sidebar-active" />
-        <label for="sidebar-active" class="open-sidebar-button">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            height="32"
-            viewBox="0 -960 960 960"
-            width="32"
-          >
-            <path
-              d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
-            />
-          </svg>
-        </label>
-        <label id="overlay" for="sidebar-active"></label>
-        <div class="links-container">
-          <label for="sidebar-active" class="close-sidebar-button">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="32"
-              viewBox="0 -960 960 960"
-              width="32"
-            >
-              <path
-                d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
-              />
-            </svg>
-          </label>
 
-          <a class="home-link" href="index.html">signe sunekær</a>
-          <!-- link back to homepage -->
-          <a href="index.html">hjem</a>
-          <!-- link back to homepage -->
-          <a href="portfolio.html">portfolio</a>
-          <a href="om_mig.html">om mig</a>
-          <a href="kontakt.html">kontakt</a>
-        </div>
+  <body>
+    <header class="header">
+      <div class="header__logo">signe sunekær</div>
+      <nav>
+        <ul>
+          <li><a href="index.html">hjem</a></li>
+          <li><a href="portfolio.html">portfolio</a></li>
+          <li><a href="om_mig.html">om mig</a></li>
+          <li><a href="kontakt.html">kontakt</a></li>
+        </ul>
       </nav>
-      <!-- https://www.youtube.com/watch?v=8eFeIFKAKHw -->
     </header>
 
-    <main class="main">
-      <!-- multimediedesigner sektion -->
-       <div class="grid-container">
-      <section class="multimediedesigner" id="hjem">
-        <div class="multimediedesigner__text">
-          <h1 class="multimediedesigner__title">multimediedesigner</h1>
-          <p class="multimediedesigner__description">
-            Hej, mit navn er Signe!
-            <br />
-            Jeg er studerende på Multimediedesignuddannelsen med en passion for
-            at skabe designs, der fortæller historier og engagerer. Min tilgang
-            kombinerer kreativitet, nysgerrighed og en strategisk forståelse for
-            brugeren, hvilket hjælper mig med at udvikle løsninger, der skaber
-            ægte værdi. Jeg tror på, at design kan være både smukt og
-            meningsfuldt, og jeg arbejder for at forene de to i alt, hvad jeg
-            laver.
-          </p>
-        </div>
-        <div class="sprite"></div>
+    <section class="hero">
+      <div class="hero__text-content">
+        <h1 class="hero__title">multimediedesigner</h1>
+        <p class="hero__text">
+          Hej, mit navn er Signe! <br />
+          Jeg er studerende på Multimediedesignuddannelsen med en passion for at
+          skabe designs, der fortæller historier og engagerer. Min tilgang
+          kombinerer kreativitet, nysgerrighed og en strategisk forståelse for
+          brugeren, hvilket hjælper mig med at udvikle løsninger, der skaber
+          ægte værdi. Jeg tror på, at design kan være både smukt og
+          meningsfuldt, og jeg arbejder for at forene de to i alt, hvad jeg
+          laver.
+        </p>
       </div>
+      <img
+        class="hero__image"
+        src="images/hero_pige.png"
+        alt="pige med stjerner"
+      />
+    </section>
 
-        <!-- min portfolio sektion -->
-      </section class="minportfolio">
-        <div> 
-          <h2 class="minportfolio_title">min portfolio</h2>
-        </div>
-        <div class="carousel"> <!-- carousel lavet med hjælp fra chatGPT -->
-          <div class="carousel-container">
-            <div class="carousel-slide"><img src="images/downs.jpg" alt="Image 1"></div>
-            <div class="carousel-slide"><img src="images/magasin.jpg" alt="Image 2"></div>
-            <div class="carousel-slide"><img src="images/people.jpg" alt="Image 3"></div>
-            <div class="carousel-slide"><img src="images/dancing.jpg" alt="Image 4"></div>
-          </div>
-          <!-- Navigationsknapper -->
-          <button class="prev">❮</button>
-          <button class="next">❯</button>
-          <script src="script.js"></script>
-        </div>
-      <section>
+    <aside class="aside">
+      <h1 class="aside__title">er jeg den, I leder efter?</h1>
+      <p class="aside__text">
+        Jeg skaber kreative og funktionelle løsninger, der gør en forskel.
+      </p>
+      <a href="kontakt.html" class="button button-blue">kontakt</a>
+    </aside>
 
-      </section>
+    <footer class="footer">
+      <h2 class="footer__title"></h2>
+      <div>
+        <ul>
+          <li><strong>linkedin</strong></li>
+          <li>signe sunekær</li>
+        </ul>
+
+        <ul>
+          <li><strong>mobil</strong></li>
+          <li>+45 23277018</li>
+        </ul>
+
+        <ul>
+          <li><strong>mail</strong></li>
+          <li>signesunekaer@outlook.dk</li>
+        </ul>
+      </div>
+    </footer>
   </body>
 </html>
