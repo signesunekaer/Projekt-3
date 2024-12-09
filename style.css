@@ -49,6 +49,7 @@ body {
 
   /* multimediedesigner sektion */
 
+
   .grid-container {
     display: grid;
     grid-template-areas: 
@@ -99,4 +100,151 @@ body {
     }
   
   .minportfolio {
-    backg
+    background-color: #f7a4c2;
+  }
+
+/* Basisstil for carousel */
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 600px; /* Sæt maks. bredde */
+    margin: auto;
+    overflow: hidden; /* Skjul indhold uden for containeren */
+    border-radius: 10px;
+  }
+  
+  /* Container til slides */
+  .carousel-container {
+    display: flex; /* Sørger for, at slides ligger side om side */
+    transition: transform 0.5s ease; /* Glidende bevægelse ved navigation */
+  }
+  
+  /* Slide-stil */
+  .carousel-slide {
+    min-width: 100%; /* Hvert slide fylder hele carouselens bredde */
+    box-sizing: border-box;
+  }
+  
+  .carousel-slide img {
+    width: 100%;
+    display: block;
+    object-fit: cover; /* Sørger for, at billeder fylder korrekt */
+  }
+  
+  /* Knapper */
+  button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 2rem;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+  }
+  
+  button.prev {
+    left: 10px; /* Placer på venstre side */
+  }
+  
+  button.next {
+    right: 10px; /* Placer på højre side */
+  }
+  
+  button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }  
+
+  /* kontaktside */
+  .kontakt {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #f4f3f2;
+  }
+  
+  .kontakt__text {
+    max-width: 500px;
+  }
+  
+  .kontakt__title {
+    color: #f7a4c2;
+    font-size: 75px;
+    margin: 100px;
+  }
+  
+  .kontakt__description {
+    /* margin-top: 1rem; */
+    line-height: 1.5;
+    margin: 100px;
+    width: 700px;
+  }
+  
+
+  @media(max-width: 750px){ /* https://www.youtube.com/watch?v=8eFeIFKAKHw */
+    .links-container{
+      flex-direction: column;
+      align-items: flex-start;
+  
+      position: fixed;
+      top: 0;
+      right: -100%;
+      z-index: 10;
+      width: 300px;
+  
+      background-color: #f4f3f2;
+      box-shadow: -5px 0 5px rgba(0, 0, 0, 0.25);
+      transition: 0.75s ease-out;
+    }
+    nav a{ /* https://www.youtube.com/watch?v=8eFeIFKAKHw */
+      box-sizing: border-box;
+      height: auto;
+      width: 100%;
+      padding: 20px 30px;
+      justify-content: flex-start;
+    }
+    .open-sidebar-button, .close-sidebar-button{ /* https://www.youtube.com/watch?v=8eFeIFKAKHw */
+      padding: 20px;
+      display: block;
+    }
+    #sidebar-active:checked ~ .links-container{ /* https://www.youtube.com/watch?v=8eFeIFKAKHw */
+      right: 0;
+    }
+    #sidebar-active:checked ~ #overlay{ /* https://www.youtube.com/watch?v=8eFeIFKAKHw */
+      height: 100%;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 9;
+    }
+    .multimediedesigner {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+        text-align: center;
+    }
+    
+    .multimediedesigner__text {
+        max-width: 100%;
+        margin: 1rem auto;
+        justify-content: center;
+    }
+    
+    .multimediedesigner__title {
+        font-size: 40px;
+        margin: 1rem 0;
+        text-align: center;
+    }
+    
+    .multimediedesigner__description {
+        margin: 3rem;
+        width: 90%;
+        font-size: 13px;
+        text-align: left;
+    }
+}
