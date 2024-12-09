@@ -1,0 +1,103 @@
+body {
+    font-family: "Work Sans", sans-serif;
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+    /*background-color: #f4f3f2; */
+  }
+  
+  nav{ /* https://www.youtube.com/watch?v=8eFeIFKAKHw */
+    height: 60px;
+    background-color: #f4f3f2;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+  .links-container{ /* https://www.youtube.com/watch?v=8eFeIFKAKHw */
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  nav a{ /* https://www.youtube.com/watch?v=8eFeIFKAKHw */
+    height: 100%;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #111111;
+  }
+  nav a:hover{
+    color: #f7a4c2;
+  }
+  nav .home-link{ /* https://www.youtube.com/watch?v=8eFeIFKAKHw */
+    margin-right: auto;
+    color: #1d3fba;
+  }
+  nav svg{ /* https://www.youtube.com/watch?v=8eFeIFKAKHw */
+    fill: #111111;
+  }
+  #sidebar-active{ /* https://www.youtube.com/watch?v=8eFeIFKAKHw */
+    display: none;
+  }
+  .open-sidebar-button, .close-sidebar-button{ /* https://www.youtube.com/watch?v=8eFeIFKAKHw */
+    display: none;
+  }
+
+  /* multimediedesigner sektion */
+  .multimediedesigner {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: center; 
+    padding: 1rem 2rem;
+    background-color: #f4f3f2;
+  }
+  
+  .multimediedesigner__text {
+    max-width: 500px;
+  }
+  
+  .multimediedesigner__title {
+    color: #1d3fba;
+    font-size: 75px;
+    margin: 100px;
+  }
+  
+  .multimediedesigner__description {
+    line-height: 1.5;
+    margin: 100px;
+    width: 720px;
+  }
+
+  .sprite{
+    width: 500px;
+    height: 500px;
+    background: url(animations/cssanimationen.webp) 0 0 no-repeat;
+    animation: play 3s steps(20) infinite;
+    }
+    
+    @keyframes play{
+        0%{background-position: 0px;}
+        100%{background-position: -10000px;}
+    }
+  
+  .minportfolio {
+    background-color: #f7a4c2;
+  }
+
+/* Basisstil for carousel */
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 600px; /* Sæt maks. bredde */
+    margin: auto;
+    overflow: hidden; /* Skjul indhold uden for containeren */
+    border-radius: 10px;
+  }
+  
+  /* Container til slides */
+  .carousel-container {
+    displa
