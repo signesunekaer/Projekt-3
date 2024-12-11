@@ -89,6 +89,11 @@ header {
 color: var(--blue);
 font-weight: bold;
 font-size: 1.5rem;
+text-decoration: none;
+}
+
+.header__logo:hover {
+    color: var(--pink);
 }
 
 nav ul {
@@ -368,6 +373,81 @@ nav a:focus {
             justify-items: center; /* Centrerer hvert content__item i sin celle */
         }
 }
+
+/* info */
+.info {
+    background-color: var(--pink);
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.info__title {
+    color: var(--white);
+    font-size: 32px;
+    margin-bottom: 50px;
+}
+
+.info__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Mobil: 2 kolonner */
+    gap: 10px;
+    justify-items: center;
+    align-items: center;
+}
+
+.info__item {
+    max-width: 100px; /* Sæt en maksimal bredde for logoerne */
+    height: auto; /* Bevar proportionerne */
+    margin: 0;
+    padding: 0;
+}
+
+/* Responsivt design: større skærme */
+@media (min-width: 1024px) {
+    .info__title {
+        font-size: 48px;
+    }
+    .info__grid {
+        grid-template-columns: repeat(6, 1fr); /* Desktop: 6 kolonner */
+        gap: 10px;
+    }
+
+    .info__item {
+        max-width: 80px; /* Mindre logoer på større skærme, hvis nødvendigt */
+    }
+}
+
+/* connect */
+.connect {
+    height: 420px;
+}
+
+.connect__image {
+    width: 150px;  /* Ændrer billede størrelsen */
+    height: auto;  /* Bevarer proportionerne */
+    object-fit: contain;
+    margin-left: 165px;
+    margin-top: 40px;
+}
+
+.connect__text {
+    font-size: 25px;
+    color: var(--blue);
+    margin: 0 100px;
+    margin-top: 8px;
+}
+
+@media (min-width: 768px) {
+    .connect__text {
+        font-size: 48px;
+        margin: 0 250px;
+        text-align: center;
+    }
+    .connect__image {
+        align-items: center;
+    }
+}
+
 
 /* kontaktformular */
 .contact-form-container {
