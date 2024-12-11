@@ -7,12 +7,15 @@
 
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
     margin: 0;
     padding: 0;
     font-family: "Work sans", sans-serif;
+    background-color: var(--white);
 }
 
 img {
@@ -139,6 +142,15 @@ nav a:focus {
     align-items: center; 
     gap: 1rem;
  }
+
+ .hero1 {
+    padding: 6em 0 0 0;
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    gap: 1rem;
+ }
  
  .hero__title {
      padding: 2rem;
@@ -172,6 +184,16 @@ nav a:focus {
         padding-right: 5rem; 
         padding-left: 5rem; 
         height: 650px;
+    }
+
+    .hero1 {
+        display: grid;
+        grid-template-columns: 4fr 4fr;
+        gap: 20px;
+        align-items: center;
+        padding-right: 5rem; 
+        padding-left: 5rem; 
+        height: 400px;
     }
 
     .hero__title {
@@ -286,7 +308,157 @@ nav a:focus {
 }
 }
 
-/*footer */
+/* content */
+.content {
+    background-color: var(--white);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;   /* Centrerer alle børn vandret */
+    gap: 2rem;             /* Lægger lidt afstand mellem overskrifter og billeder */
+  }
+  
+.content__item {
+    text-align: center; /* Sørger for, at titel og billede centrerer sammen */
+}
+
+  .content__title {
+    color: var(--blue);
+    margin-bottom: 5px;  /* Giver lidt afstand til billederne */
+  }
+  
+  .content__project {
+    width: autopx;      /* Samme bredde som animationen */
+    height: 400px;     /* Samme højde som animationen */
+    object-fit: cover; /* Sørger for, at billedet dækker containeren uden at ændre proportionerne */
+    margin: 0 auto;    /* Centrerer billedet */
+  }
+  .content__sprite{
+    width: 500px;
+    height: 500px;
+    background: url(animations/cssanimationen.webp) 0 0 no-repeat;
+    animation: play 3s steps(20) infinite;
+    }
+    
+    @keyframes play{
+        0%{background-position: 0px;}
+        100%{background-position: -10000px;}
+    }
+
+    @media (min-width: 768px) {
+        .content {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* To projekter pr. række */
+            gap: 2rem; /* Afstand mellem rækker og kolonner */
+            justify-items: center; /* Centrerer hvert content__item i sin celle */
+        }
+}
+
+/* kontaktformular */
+.contact-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Fylder hele skærmen */
+    background-color: var(--white);
+    padding: 1rem;
+  }
+  
+  .contact-form {
+    max-width: 500px;
+    width: 100%;
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contact-form__title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--blue);
+  }
+  
+  .contact-form__label {
+    font-size: 1rem;
+    color: var(--black);
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+  
+  .contact-form__input,
+  .contact-form__textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    background-color: var(--white);
+    font-family: "Work sans", sans-serif;
+  }
+  
+  .contact-form__input:focus,
+  .contact-form__textarea:focus {
+    outline: 2px solid var(--blue);
+  }
+  
+  .contact-form__button {
+    width: 50%;
+    padding: 1rem;
+    margin-left: 100px;
+    font-weight: bold;
+    background-color: var(--blue);
+    color: var(--white);
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .contact-form__button:hover {
+    background-color: var(--pink);
+  }
+  
+  @media (min-width: 768px) {
+    .contact-form-container {
+      padding: 3rem;
+    }
+  
+    .contact-form {
+      padding: 3rem;
+    }
+  
+    .contact-form__title {
+      font-size: 2.5rem;
+    }
+  
+    .contact-form__input,
+    .contact-form__textarea {
+      font-size: 1.2rem;
+    }
+  
+    .contact-form__button {
+      font-size: 1.2rem;
+    }
+  }
+
+
+/* line */
+.line__blue {
+    height: 13px;
+    background-color: var(--blue);
+}
+
+.line__pink {
+    height: 13px;
+    background-color: var(--pink);
+}
+
+
+/* footer */
 .footer {
     background-color: var(--white); /* Neutral baggrund */
     padding: 2rem 1rem;
@@ -342,7 +514,6 @@ nav a:focus {
     margin-top: 2rem;
 }
 
-/* Breakpoint for større skærme */
 @media (min-width: 768px) {
     .footer__content {
         flex-direction: column; /* Holder billedet nedenunder */
