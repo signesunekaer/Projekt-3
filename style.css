@@ -160,6 +160,14 @@ nav a:focus {
      margin-bottom: 0;
  }
 
+ .hero__title2 {
+    padding: 2rem;
+    color: var(--pink);
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 0;
+}
+
  .hero__text {
      margin: 0;
      padding: 2rem;
@@ -197,6 +205,13 @@ nav a:focus {
     }
 
     .hero__title {
+        text-align: left;
+        padding: 0;
+        padding-bottom: 2rem;
+        margin-left: 4rem; 
+    }
+
+    .hero__title2 {
         text-align: left;
         padding: 0;
         padding-bottom: 2rem;
@@ -385,6 +400,7 @@ nav a:focus {
     color: var(--black);
     margin-bottom: 0.5rem;
     display: block;
+    font-weight: bold;
   }
   
   .contact-form__input,
@@ -409,7 +425,7 @@ nav a:focus {
     padding: 1rem;
     margin-left: 100px;
     font-weight: bold;
-    background-color: var(--blue);
+    background-color: var(--pink);
     color: var(--white);
     border: none;
     border-radius: 25px;
@@ -419,7 +435,7 @@ nav a:focus {
   }
   
   .contact-form__button:hover {
-    background-color: var(--pink);
+    background-color: var(--blue);
   }
   
   @media (min-width: 768px) {
