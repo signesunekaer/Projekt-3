@@ -388,17 +388,16 @@ nav a:focus {
 }
 
 .info__grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Mobil: 2 kolonner */
-    gap: 10px;
+
+    gap: 5px; /* Reduceret afstand mellem kolonner og rækker */
     justify-items: center;
     align-items: center;
 }
 
 .info__item {
-    max-width: 100px; /* Sæt en maksimal bredde for logoerne */
+    max-width: 80px; /* Logoernes maksimale bredde */
     height: auto; /* Bevar proportionerne */
-    margin: 0;
+    margin: 10px; /* Ingen margin omkring logoerne */
     padding: 0;
 }
 
@@ -408,12 +407,11 @@ nav a:focus {
         font-size: 48px;
     }
     .info__grid {
-        grid-template-columns: repeat(6, 1fr); /* Desktop: 6 kolonner */
-        gap: 10px;
+        gap: 15px; /* Reduceret afstand mellem logoerne */
     }
 
     .info__item {
-        max-width: 80px; /* Mindre logoer på større skærme, hvis nødvendigt */
+        max-width: 70px; /* Mindre logoer på større skærme */
     }
 }
 
@@ -444,7 +442,7 @@ nav a:focus {
         text-align: center;
     }
     .connect__image {
-        align-items: center;
+        margin-left: 640px;
     }
 }
 
