@@ -24,7 +24,7 @@ img {
 }
 
 .container {
-    width: 95‰;
+    width: 95%;
     margin: 0 auto;
 }
 
@@ -261,7 +261,7 @@ nav a:focus {
 
 /* Blomst 3 (øverst i midten) */
 .blomst3 {
-    top: 5%;
+    top: 3%;
     left: 50%;
     transform: translateX(-50%);
     width: 220px;
@@ -269,7 +269,7 @@ nav a:focus {
 
 /* Blomst 1 (nederst til højre) */
 .blomst1 {
-    bottom: 35%;
+    bottom: 18%;
     right: -10%;
     width: 200px;
 }
@@ -284,8 +284,9 @@ nav a:focus {
 .aside__title {
      margin-top: 2rem;
      margin-bottom: 0;
-     margin-left: 110px;
+     margin-left: 30px;
      font-size: 48px;
+     text-align: center;
 }
 .aside__text {
     margin: 0;
@@ -299,7 +300,7 @@ nav a:focus {
         height: 620px;
     }
     .aside__title {
-        padding-left: 400px;
+        padding-right: 50px;
         margin-top: -5rem;
         font-size: 80px;
     }
@@ -334,43 +335,32 @@ nav a:focus {
     padding: 2rem;
     display: flex;
     flex-direction: column;
-    align-items: center;   /* Centrerer alle børn vandret */
-    gap: 2rem;             /* Lægger lidt afstand mellem overskrifter og billeder */
+    align-items: center;  
+    gap: 2rem;
   }
   
 .content__item {
-    text-align: center; /* Sørger for, at titel og billede centrerer sammen */
+    text-align: center;
 }
 
   .content__title {
     color: var(--blue);
-    margin-bottom: 5px;  /* Giver lidt afstand til billederne */
+    margin-bottom: 5px;
   }
   
   .content__project {
-    width: autopx;      /* Samme bredde som animationen */
-    height: 400px;     /* Samme højde som animationen */
-    object-fit: cover; /* Sørger for, at billedet dækker containeren uden at ændre proportionerne */
-    margin: 0 auto;    /* Centrerer billedet */
+    width: auto;
+    height: 400px;
+    object-fit: cover; 
+    margin: 0 auto;  
   }
-  .content__sprite{
-    width: 500px;
-    height: 500px;
-    background: url(animations/cssanimationen.webp) 0 0 no-repeat;
-    animation: play 3s steps(20) infinite;
-    }
-    
-    @keyframes play{
-        0%{background-position: 0px;}
-        100%{background-position: -10000px;}
-    }
 
     @media (min-width: 768px) {
         .content {
             display: grid;
-            grid-template-columns: repeat(2, 1fr); /* To projekter pr. række */
-            gap: 2rem; /* Afstand mellem rækker og kolonner */
-            justify-items: center; /* Centrerer hvert content__item i sin celle */
+            grid-template-columns: repeat(2, 1fr); 
+            gap: 2rem; 
+            justify-items: center; 
         }
 }
 
@@ -389,40 +379,39 @@ nav a:focus {
 
 .info__grid {
 
-    gap: 5px; /* Reduceret afstand mellem kolonner og rækker */
+    gap: 5px; 
     justify-items: center;
     align-items: center;
 }
 
 .info__item {
-    max-width: 80px; /* Logoernes maksimale bredde */
-    height: auto; /* Bevar proportionerne */
-    margin: 10px; /* Ingen margin omkring logoerne */
+    max-width: 80px; 
+    height: auto; 
+    margin: 10px; 
     padding: 0;
 }
 
-/* Responsivt design: større skærme */
 @media (min-width: 1024px) {
     .info__title {
         font-size: 48px;
     }
     .info__grid {
-        gap: 15px; /* Reduceret afstand mellem logoerne */
+        gap: 15px; 
     }
 
     .info__item {
-        max-width: 70px; /* Mindre logoer på større skærme */
+        max-width: 70px; 
     }
 }
 
 /* connect */
 .connect {
-    height: 420px;
+    height: 450px;
 }
 
 .connect__image {
-    width: 150px;  /* Ændrer billede størrelsen */
-    height: auto;  /* Bevarer proportionerne */
+    width: 150px;  
+    height: auto;  
     object-fit: contain;
     margin-left: 165px;
     margin-top: 40px;
@@ -452,7 +441,7 @@ nav a:focus {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh; /* Fylder hele skærmen */
+    min-height: 100vh; 
     background-color: var(--white);
     padding: 1rem;
   }
@@ -554,7 +543,7 @@ nav a:focus {
 
 /* footer */
 .footer {
-    background-color: var(--white); /* Neutral baggrund */
+    background-color: var(--white);
     padding: 2rem 1rem;
     text-align: center;
 }
@@ -567,17 +556,17 @@ nav a:focus {
 
 .footer__content {
     display: flex;
-    flex-direction: column; /* Vertikalt layout som standard */
+    flex-direction: column;
     align-items: center;
-    gap: 2rem; /* Plads mellem tekst og billede */
+    gap: 2rem; 
     padding: 0 2rem;
-    max-width: 1200px; /* Begrænser bredden */
+    max-width: 1200px; 
     margin: 0 auto;
 }
 
 .footer__text {
     display: flex;
-    flex-direction: column; /* Tekst er lodret på mindre skærme */
+    flex-direction: column; 
     align-items: center;
     gap: 1.5rem;
 }
@@ -586,7 +575,7 @@ nav a:focus {
     list-style: none;
     padding: 0;
     display: flex;
-    flex-direction: column; /* Overskrift over teksten */
+    flex-direction: column; 
     align-items: center;
     gap: 0.5rem;
 }
@@ -602,15 +591,24 @@ nav a:focus {
     text-align: center;
 }
 
+.footer__list-link {
+    text-decoration: none;
+}
+
+.footer__list-link:hover {
+    color: var(--pink);
+}
+
+
 .footer__image img {
-    max-width: 150px; /* Sørger for, at billedet ikke bliver for stort */
+    max-width: 150px;
     height: auto;
     margin-top: 2rem;
 }
 
 @media (min-width: 768px) {
     .footer__content {
-        flex-direction: column; /* Holder billedet nedenunder */
+        flex-direction: column; 
     }
 
     .footer__title {
@@ -618,23 +616,23 @@ nav a:focus {
     }
 
     .footer__text {
-        flex-direction: row; /* Gør teksten til en række */
-        justify-content: space-between; /* Spreder elementerne ud */
-        gap: 2rem; /* Afstand mellem elementerne */
-        width: 100%; /* Sørger for, at rækken fylder hele bredden */
+        flex-direction: row; 
+        justify-content: space-between; 
+        gap: 2rem; 
+        width: 100%;
     }
 
     .footer__list {
-        flex-direction: column; /* Bevarer overskrift over teksten */
+        flex-direction: column; 
         align-items: center;
     }
 
     .footer__list:nth-child(2) { /* Den midterste liste (mobil + nummer) */
         margin-left: auto;
-        margin-right: auto; /* Centrerer den midterste sektion */
+        margin-right: auto; 
     }
 
     .footer__image img {
-        margin-top: 2rem; /* Holder pladsen mellem rækken og billedet */
+        margin-top: 2rem; 
     }
 }
