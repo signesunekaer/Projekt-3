@@ -148,7 +148,7 @@ nav a:focus {
     gap: 1rem;
  }
 
- .hero1 {
+ .hero--contact {
     padding: 6em 0 0 0;
     background-color: var(--white);
     display: flex;
@@ -165,7 +165,7 @@ nav a:focus {
      margin-bottom: 0;
  }
 
- .hero__title2 {
+ .hero__title--pink {
     padding: 2rem;
     color: var(--pink);
     text-align: center;
@@ -198,7 +198,7 @@ nav a:focus {
         height: 650px;
     }
 
-    .hero1 {
+    .hero--contact {
         display: grid;
         grid-template-columns: 4fr 4fr;
         gap: 20px;
@@ -215,7 +215,7 @@ nav a:focus {
         margin-left: 4rem; 
     }
 
-    .hero__title2 {
+    .hero__title--pink {
         text-align: left;
         padding: 0;
         padding-bottom: 2rem;
@@ -615,12 +615,12 @@ nav a:focus {
 
 
 /* line */
-.line__blue {
+.line--blue {
     height: 13px;
     background-color: var(--blue);
 }
 
-.line__pink {
+.line--pink {
     height: 13px;
     background-color: var(--pink);
 }
