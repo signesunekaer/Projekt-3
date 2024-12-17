@@ -14,7 +14,7 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: "Work sans", sans-serif;
+    font-family: "Work Sans", sans-serif;
     background-color: var(--white);
 }
 
@@ -42,13 +42,13 @@ h1 {
 /* buttons */
 .button {
     display: flex;
-    justify-content: center; /* Gør det muligt at centrere indholdet i knappen */
+    justify-content: center; 
     font-size: 1rem;
     color: var(--white);
     text-decoration: none;
     padding: .5em 1em;
-    width: 25%; /* Sørger for, at knappen ikke er for bred */
-    margin-top: 2rem; /* Skaber lidt afstand fra teksten */
+    width: 25%;
+    margin-top: 2rem; 
     
 }
 
@@ -241,7 +241,7 @@ nav a:focus {
     background-color: var(--pink);
     padding: 2em 0;
     height: 735px;
-    position: relative; /* Tilføj denne linje for at sikre, at billederne placeres i forhold til .aside */
+    position: relative;
 }
 
 .aside__title, .aside__text {
@@ -254,8 +254,8 @@ nav a:focus {
 
 .blomst {
     position: absolute;
-    height: auto; /* Sørg for, at billedets proportioner bevares */
-    z-index: 1; /* Blomsterne bag teksten */
+    height: auto; 
+    z-index: 1;
 }
 
 /* Blomst 3 (øverst i midten) */
@@ -340,6 +340,7 @@ nav a:focus {
   
 .content__item {
     text-align: center;
+    max-width: 100%;
 }
 
   .content__title {
